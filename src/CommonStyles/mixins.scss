@@ -1,0 +1,20 @@
+@import './variables.scss';
+
+@mixin title($font-size, $line-height, $font-weight) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}
+
+@mixin text($font-size, $line-height, $font-weight, $color) {
+  @include title($font-size, $line-height, $font-weight);
+  color: $color;
+}
+
+@mixin flex($dir: row, $wrap: nowrap, $just: inherit, $ali: inherit) {
+  display: flex;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $just;
+  align-items: $ali;
+}

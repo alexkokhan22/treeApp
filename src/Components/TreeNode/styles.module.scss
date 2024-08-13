@@ -1,0 +1,20 @@
+@import 'src/CommonStyles/mixins';
+@import 'src/CommonStyles/variables';
+
+.treeNodeContainer {
+  width: 100%;
+  height: 100%;
+  @include flex($ali: center, $just: flex-start);
+  margin-left: 5%;
+
+  .treeNodeButtonsContainer {
+    @include flex($ali: center, $just: center);
+    margin-left: 10px;
+
+    button {
+      border: none;
+      background: none;
+      @include flex($ali: center, $just: center);
+    }
+  }
+}

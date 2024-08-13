@@ -1,0 +1,39 @@
+@import 'src/CommonStyles/mixins';
+@import 'src/CommonStyles/variables';
+
+.inputContainer {
+  position: relative;
+  @include flex($dir: column);
+  width: 100%;
+
+  .inputLabel {
+    user-select: none;
+  }
+
+  .requiredField:after {
+    content: "*";
+    color: $red-main;
+    padding-right: 2px;
+  }
+
+  .input {
+    outline: none;
+    border: solid 1px $black;
+    border-radius: 4px;
+    padding: 0 10px;
+    min-height: 30px;
+    -webkit-appearance: none;
+
+    &::placeholder {
+      color: $black;
+    }
+
+    &.error {
+      border-color: $red-main;
+    }
+  }
+}
+
+.errorContent {
+  color: $red-main;
+}

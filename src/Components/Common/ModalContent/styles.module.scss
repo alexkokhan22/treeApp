@@ -1,0 +1,46 @@
+@import 'src/CommonStyles/mixins';
+@import 'src/CommonStyles/variables';
+
+.modalContentContainer {
+  width: 70%;
+  height: 100%;
+  @include flex($dir: column, $ali: center, $just: center);
+
+  span {
+    margin-bottom: 20px;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .modalButtonsContainer {
+    width: 50%;
+    @include flex($ali: center, $just: space-between);
+    margin-top: 20px;
+
+    button {
+      width: 40%;
+      padding: 15px;
+    }
+
+    @media screen and (max-width: 1200px) {
+      width: 100%;
+
+      button {
+        width: 65px;
+        padding: 10px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      @include flex($ali: center, $just: center);
+
+      button {
+        width: 100%;
+        margin-left: 5px;
+        padding: 8px;
+      }
+    }
+  }
+}

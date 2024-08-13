@@ -1,0 +1,14 @@
+@import 'src/CommonStyles/mixins';
+@import 'src/CommonStyles/variables';
+
+
+.appContainer {
+   width: 100%;
+   height: 100%;
+   @include flex($dir: column, $ali: flex-start, $just: center);
+
+   h1 {
+      margin-left: 20px;
+      @include text(16px, 20px, $Regular, $grey-main);
+   }
+}
